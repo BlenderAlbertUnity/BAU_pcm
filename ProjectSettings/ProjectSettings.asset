@@ -12,7 +12,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: EinsteinGames
-  productName: PreCureCrystal
+  productName: PreCureMusou
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -148,7 +148,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.EinsteinGames.PreCureCrystal
+    Android: com.EinsteinGames.PreCureMusou
     Standalone: unity.EinsteinGames.PreCureCrystal
     Tizen: com.EinsteinGames.PreCureCrystal
     iOS: com.EinsteinGames.PreCureCrystal
@@ -669,19 +669,19 @@ PlayerSettings:
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
     Analytics: 0
-    Build: 0
+    Build: 1
     Collab: 0
     ErrorHub: 0
     Game_Performance: 0
     Hub: 0
     Purchasing: 0
-    UNet: 0
+    UNet: 1
     Unity_Ads: 0
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: ff3ef7b7-b047-4c3d-8dce-6710842e2ff3
+  projectName: Pre Cure Musou
+  organizationId: einstein-games
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
