@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: 44a466c8f1a16a940a807f0358a9549e
+timeCreated: 1509626999
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Circle_001
+    100002: Circle_025
+    100004: Circle_05
+    100006: Circle_075
+    100008: //RootNode
+    100010: Circle_001_Cut
+    100012: Circle_025_Cut
+    100014: Circle_05_Cut
+    100016: Circle_075_Cut
+    100018: Circle_025_R90
+    100020: Circle_025_R90_Cut
+    100022: Circle_05_R90
+    100024: Circle_05_R90_Cut
+    100026: Circle_075_R90
+    100028: Circle_075_R90_Cut
+    400000: Circle_001
+    400002: Circle_025
+    400004: Circle_05
+    400006: Circle_075
+    400008: //RootNode
+    400010: Circle_001_Cut
+    400012: Circle_025_Cut
+    400014: Circle_05_Cut
+    400016: Circle_075_Cut
+    400018: Circle_025_R90
+    400020: Circle_025_R90_Cut
+    400022: Circle_05_R90
+    400024: Circle_05_R90_Cut
+    400026: Circle_075_R90
+    400028: Circle_075_R90_Cut
+    2300000: Circle_001
+    2300002: Circle_025
+    2300004: Circle_05
+    2300006: Circle_075
+    2300008: Circle_001_Cut
+    2300010: Circle_025_Cut
+    2300012: Circle_05_Cut
+    2300014: Circle_075_Cut
+    2300016: Circle_025_R90
+    2300018: Circle_025_R90_Cut
+    2300020: Circle_05_R90
+    2300022: Circle_05_R90_Cut
+    2300024: Circle_075_R90
+    2300026: Circle_075_R90_Cut
+    3300000: Circle_001
+    3300002: Circle_025
+    3300004: Circle_05
+    3300006: Circle_075
+    3300008: Circle_001_Cut
+    3300010: Circle_025_Cut
+    3300012: Circle_05_Cut
+    3300014: Circle_075_Cut
+    3300016: Circle_025_R90
+    3300018: Circle_025_R90_Cut
+    3300020: Circle_05_R90
+    3300022: Circle_05_R90_Cut
+    3300024: Circle_075_R90
+    3300026: Circle_075_R90_Cut
+    4300000: Circle_001
+    4300002: Circle_075
+    4300004: Circle_025
+    4300006: Circle_05
+    4300008: Circle_001_Cut
+    4300010: Circle_025_Cut
+    4300012: Circle_05_Cut
+    4300014: Circle_075_Cut
+    4300016: Circle_075_R90_Cut
+    4300018: Circle_05_R90_Cut
+    4300020: Circle_025_R90_Cut
+    4300022: Circle_025_R90
+    4300024: Circle_075_R90
+    4300026: Circle_05_R90
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
