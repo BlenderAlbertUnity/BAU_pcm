@@ -32458,28 +32458,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: show
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 615bfbf4c0f5c4e4abf71a6599b574a1, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.75
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: noDamage
     path: 
     classID: 114
@@ -32532,13 +32510,6 @@ AnimationClip:
       path: 3925818253
       attribute: 1929607803
       script: {fileID: 11500000, guid: ef8ab5169ffbce74795ce6337d248c51, type: 3}
-      typeID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 0
-      attribute: 839833857
-      script: {fileID: 11500000, guid: 615bfbf4c0f5c4e4abf71a6599b574a1, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
@@ -33446,7 +33417,7 @@ AnimationClip:
     m_StartTime: 0
     m_StopTime: 0.75000006
     m_OrientationOffsetY: 0
-    m_Level: -0.1
+    m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 0
@@ -65902,28 +65873,6 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: show
-    path: 
-    classID: 114
-    script: {fileID: 11500000, guid: 615bfbf4c0f5c4e4abf71a6599b574a1, type: 3}
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 2
-        time: 0
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      - serializedVersion: 2
-        time: 0.75
-        value: 1
-        inSlope: Infinity
-        outSlope: Infinity
-        tangentMode: 103
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
     attribute: noDamage
     path: 
     classID: 114
@@ -65956,9 +65905,9 @@ AnimationClip:
   m_GenerateMotionCurves: 0
   m_Events:
   - time: 0.016666668
-    functionName: SaySameThing
-    data: 11,18,32
+    functionName: SayThis
+    data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 14
     messageOptions: 0
