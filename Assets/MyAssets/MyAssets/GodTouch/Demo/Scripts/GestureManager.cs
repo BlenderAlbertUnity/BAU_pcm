@@ -132,42 +132,64 @@ namespace GodTouches
 				deltaMoving.y  = Mathf.Abs(pos.y - lastPos.y);
 				holdingTime  = Time.time - startTime;
 
-				if(holdingTime > CheckTime && type != EventType.Slide && type != EventType.Hold)
-				{
-					if(movedDistance.x > CheckDistance || movedDistance.y > CheckDistance)
-					{
+				if (holdingTime > CheckTime && type != EventType.Slide && type != EventType.Hold) {
+					if (movedDistance.magnitude > CheckDistance) {
 						// 一定距離動いていたらドラッグ実行
-						SetType(EventType.Slide);
+						SetType (EventType.Slide);
 
-						if(showParticle){
-							if(myParticle && myParticle.name != "Slide")
-								Destroy(myParticle);
-
-							myParticle = GameObject.Instantiate(Resources.Load("Slide"), pos, Quaternion.identity) as GameObject;
-							myParticle.name = "Slide";
-								
+						if (showParticle) {
+							if (myParticle && myParticle.name != "Slide") {
+								Destroy (myParticle);
+							} else if (!myParticle) {
+								myParticle = GameObject.Instantiate (Resources.Load ("Slide"), pos, Quaternion.identity) as GameObject;
+								myParticle.name = "Slide";
+							}
 						}
-					}else{
+					} else {
 						// 一定時間経過していたら長押し実行
-						SetType(EventType.Hold);
+						SetType (EventType.Hold);
 
-						if(showParticle){
-							if(myParticle && myParticle.name != "Hold")
-								Destroy(myParticle);
+						if (showParticle) {
+							if (myParticle && myParticle.name != "Hold") {
+								Destroy (myParticle);
+							} else if (!myParticle) {
+								myParticle = GameObject.Instantiate (Resources.Load ("Hold"), pos, Quaternion.identity) as GameObject;
+								myParticle.name = "Hold";
+							}
+						}
+					}
+				} else if (type == EventType.Slide) {
+					if (deltaMoving.magnitude == 0)
+						// 一定時間経過していたら長押し実行
+						SetType (EventType.Hold);
 
-							myParticle = GameObject.Instantiate(Resources.Load("Hold"), pos, Quaternion.identity) as GameObject;
+					if (showParticle) {
+						if (myParticle && myParticle.name != "Slide") {
+							Destroy (myParticle);
+						} else if (!myParticle) {
+							myParticle = GameObject.Instantiate (Resources.Load ("Slide"), pos, Quaternion.identity) as GameObject;
+							myParticle.name = "Slide";
+						}
+					}
+				} else if (type == EventType.Hold) {
+					if (deltaMoving.magnitude  > 0.05f)
+						// 一定時間経過していたら長押し実行
+						SetType (EventType.Slide);
+
+					if (showParticle) {
+						if (myParticle && myParticle.name != "Hold") {
+							Destroy (myParticle);
+						} else if (!myParticle) {
+							myParticle = GameObject.Instantiate (Resources.Load ("Hold"), pos, Quaternion.identity) as GameObject;
 							myParticle.name = "Hold";
 						}
 					}
 				}
 
 				if(myParticle){
-					if(myParticle.name == "Hold" || myParticle.name == "Slide"){
-						myParticle.transform.position = pos;
-					}
+					myParticle.transform.position = pos;
 				}
-			}
-			else if(!isRunning){
+			}else if(!isRunning){
 				float ndt  = Time.time - endTime;
 				if(ndt > CheckTime)
 				{
