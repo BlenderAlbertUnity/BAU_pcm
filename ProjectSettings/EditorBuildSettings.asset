@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/MyAssets/UI_Animations/Opening_Scene.unity
+    guid: 853422b6531354685aa4cf51ade7931e
+  - enabled: 1
     path: Assets/MyAssets/FromBlender/Street/Street_Scene.unity
-    guid: 00000000000000000000000000000000
+    guid: edbf89a5d99e15143bbe881c8c00c48d
