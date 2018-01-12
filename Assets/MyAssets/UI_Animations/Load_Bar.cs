@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; // Required when Using UI elements.
 using UnityEngine.Events;
+using System;
 
 public class Load_Bar : MonoBehaviour {
 
@@ -17,6 +18,10 @@ public class Load_Bar : MonoBehaviour {
 	public Text parcent;
 	public Text restTime;
 
+	DateTime lastPlayed;
+
+	public GameObject skipBttn;
+
 	[Header("OnFinished Callback")]
 	public UnityEvent OnFinishedLoad;
 
@@ -27,7 +32,16 @@ public class Load_Bar : MonoBehaviour {
 		if (!parcent || !restTime)
 			this.enabled = false;
 
-		duration = Random.Range (minTime, maxTime);
+		duration = UnityEngine.Random.Range (minTime, maxTime);
+
+		if(PrefsManager.HasKey("LastPlayed")){
+			lastPlayed = PrefsManager.GetValue<DateTime> ("LastPlayed");
+
+			if (DateTime.Today == lastPlayed) {
+				duration = 10.0f;
+				skipBttn.SetActive (false);
+			}
+		}
 	}
 
 	public void Update()
@@ -40,8 +54,11 @@ public class Load_Bar : MonoBehaviour {
 
 			parcent.text = ((int)(myImage.fillAmount * 100)).ToString () + " %";
 
-			restTime.text = ((int)(duration - rest) + 1).ToString() + " s";
-
+			if (myImage.fillAmount < 0.95f) {
+				restTime.text = ((int)(duration - rest) + 1).ToString () + " s";
+			} else {
+				restTime.text = ((int)(duration - rest)).ToString() + " s";
+			}
 			if(rest >= duration)
 				OnFinishedLoad.Invoke();
 		}

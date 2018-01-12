@@ -14,15 +14,16 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.Advertisements;
 using UnityEngine.Events;
+using System;
 
 public class UnityAdsController : MonoBehaviour
 {
 	[SerializeField]
 	string zoneID = "rewardedVideo";
 	[SerializeField]
-	string gameID_iOS = "1050908";
+	string gameID_iOS = "1234567";
 	[SerializeField]
-	string gameID_Android = "1050907";
+	string gameID_Android = "1234567";
 
 
 	[Header("OnFailedInitialize Callback")]
@@ -51,6 +52,8 @@ public class UnityAdsController : MonoBehaviour
 
 	public void ShowUnityAds ()
 	{
+		PrefsManager.SetValue<DateTime> ("LastPlayed", DateTime.Today);
+
 		#if UNITY_ANDROID || UNITY_IOS
 		if (Advertisement.IsReady(zoneID)) {
 		var options = new ShowOptions { resultCallback = HandleShowResult };
