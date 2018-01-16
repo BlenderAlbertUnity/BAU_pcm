@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class ThirdPersonCamera : MonoBehaviour
 {
@@ -23,6 +24,8 @@ public class ThirdPersonCamera : MonoBehaviour
 	GodTouches.GestureManager gesManager;
 	float stopped;
 
+	public Slider settingSlider;
+
 	void Start(){
 				
 		if(!follow){
@@ -31,6 +34,8 @@ public class ThirdPersonCamera : MonoBehaviour
 		if(!gesManager){
 			gesManager = GameObject.Find("GestureManager").GetComponent<GodTouches.GestureManager>();
 		}
+
+		LoadSettings ();
 	}
 	
 	void FixedUpdate (){	
@@ -125,5 +130,17 @@ public class ThirdPersonCamera : MonoBehaviour
 			}
 		}
 
+	}
+	//PrefsManager と Slider を使って設定のロード
+	public void LoadSettings(){
+		if(PrefsManager.HasKey(settingSlider.name)){
+			turnSpeed = PrefsManager.GetValue<float>(settingSlider.name);
+		}
+		settingSlider.value = turnSpeed;
+	}
+	//PrefsManager と Slider を使って設定のセーブ
+	public void SaveSettings(){
+		turnSpeed = settingSlider.value;
+		PrefsManager.SetValue<float>(settingSlider.name, turnSpeed);
 	}
 }

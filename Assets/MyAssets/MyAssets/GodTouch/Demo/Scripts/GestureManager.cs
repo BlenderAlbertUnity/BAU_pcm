@@ -89,8 +89,6 @@ namespace GodTouches
 		/// </summary>
 		public bool IsRunning { get { return isRunning; } }
 
-		public Slider settingSlider;
-
 		/// <summary>
 		/// イベントタイプ設定
 		/// </summary>
@@ -364,18 +362,6 @@ namespace GodTouches
 			}
 			isRunning = false;
 			endTime = Time.time;
-		}
-		//PrefsManager と Slider を使って設定のセーブ (SmartController が呼ぶ)
-		public void LoadCheckDistance(){
-			if(PrefsManager.HasKey(settingSlider.name)){
-				CheckDistance = PrefsManager.GetValue<float>(settingSlider.name);
-			}
-			settingSlider.value = CheckDistance;
-		}
-		//PrefsManager と Slider を使って設定のロード (SmartController が呼ぶ)
-		public void SaveSettings(){
-			CheckDistance = settingSlider.value;
-			PrefsManager.SetValue<float>(settingSlider.name, CheckDistance);
 		}
 	}
 }

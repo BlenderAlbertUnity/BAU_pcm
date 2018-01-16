@@ -39,7 +39,6 @@ public class SmartController : MonoBehaviour {
 			animator.SetLayerWeight(1, 1);
 		
 		gesManager = GameObject.Find("GestureManager").GetComponent<GodTouches.GestureManager>();
-		gesManager.LoadCheckDistance();
 
 		if(PrefsManager.HasKey(settingSlider.name)){
 			zOffcet = PrefsManager.GetValue<float>(settingSlider.name);

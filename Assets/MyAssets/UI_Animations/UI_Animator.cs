@@ -116,4 +116,15 @@ public class UI_Animator : MonoBehaviour {
 		myRect.localScale = Vector3.Lerp (hideSettings.myTransform.localScale, showSettings.myTransform.localScale, cValue);
 	}
 
+	public void Play(bool showIt){
+		if (showIt) {
+			show = true;
+			showSettings.finish = false;
+			transmition = 0;
+		} else {
+			show = false;
+			hideSettings.finish = false;
+			transmition = 1.0f;
+		}
+	}
 }
